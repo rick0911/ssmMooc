@@ -1,11 +1,13 @@
 package com.mage.domain;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import java.util.Date;
-
 @Data
+@NoArgsConstructor
+@Accessors(chain = true)
 public class Document {
     private Integer id;
     private String name;
@@ -15,4 +17,5 @@ public class Document {
     private String url;
     private String summary;
     private Date uploadDate;
+
 }

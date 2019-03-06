@@ -3,23 +3,26 @@ package com.qfedu.action;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.servlet.ModelAndView;
 
 @Controller
+@SessionAttributes("username")
 public class UserInfo{
 
     @RequestMapping("userDetail")
-    public ModelAndView user DetailAction(String username,Integer userType) throws Exception{
+    public ModelAndView userDetailAction(String username, Integer userType) throws Exception {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("username", username);
 
-        modelAndView.addObject(attributeName:"username",username);
 
-
-        if(userType==1){
-            return "/studentdetail.html";
-        }
-        else if (userType==2){
-            return "/teacherdetial.html";
-        }else{
-            throw new Exception("非法操作。。。");
+        System.out.println(username);
+        //判断跳转
+        if (userType == 1) {
+            modelAndView.setViewName("/studentdetail.html");
+        } else if (userType == 2) {
+            modelAndView.setViewName("/teacherdetail.html");
+        } else {
+            throw new Exception("非法操作...");
         }
 
         return modelAndView;

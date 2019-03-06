@@ -15,4 +15,6 @@ public interface DocumentDao {
 
     @Delete({"delete from document where id = #{id}"})
     public void deleteDocumentById(Integer id) throws Exception;
+
+    @Insert("insert into document)
 }
