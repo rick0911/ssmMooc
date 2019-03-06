@@ -1,7 +1,7 @@
-package com.qfedu.mapper;
+package com.mage.mapper;
 
-import com.qfedu.domain.Operation;
-import com.qfedu.domain.UserInfo;
+import com.mage.domain.Operation;
+import com.mage.domain.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

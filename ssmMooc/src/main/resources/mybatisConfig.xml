@@ -3,9 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
     <typeAliases>
-        <package name="com.mage"></package>
+        <package name="com.mage.domain"></package>
         <package name="java.lang"></package>
+        <package name="java.util"></package>
     </typeAliases>
+
 </configuration>
